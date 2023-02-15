@@ -46,7 +46,12 @@ li>a:hover{
 }
 
 header {
-    height: 12vh;
+    height: 12vh;    
+}
+
+nav {
+    position: relative;
+    z-index:3 ;
 }
 
 main {
