@@ -173,6 +173,7 @@ const cards = {
 }
 
 for (let i = 0; i < cards.events.length; i++) {
+    if (cards.events[i].date <= cards.currentDate){
     const cardContainer = document.querySelector('#card-container');
     const cardElement = document.createElement('div');
     cardElement.classList.add('card');
@@ -190,6 +191,7 @@ for (let i = 0; i < cards.events.length; i++) {
             </div>
     `;
     cardContainer.appendChild(cardElement);
+}
 }
 
 
