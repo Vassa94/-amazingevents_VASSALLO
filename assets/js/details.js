@@ -2,13 +2,14 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const cardData = JSON.parse(decodeURIComponent(urlParams.get('cardData')));
 
+
 console.log(cardData)
 
 const detailContainer = document.querySelector('#details');
 const cardElement = document.createElement('div');
 details.innerHTML = `    
         <figure class="border w-50 h-100 sombra-photo">
-            <img class="detail-photo p-2" src="" alt="Photo">
+            <img class="detail-photo p-2" src="${cardData.image}" alt="Photo">
         </figure>
         <article class="border w-50 h-100 p-2">
             <h4>

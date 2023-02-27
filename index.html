@@ -9,6 +9,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://kit.fontawesome.com/af1e17da6b.css" crossorigin="anonymous">
+    <!-- Agregar la biblioteca de Slick -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
     <title>Amazing Events</title>
 </head>
 
@@ -47,7 +54,7 @@
                 </div>
             </div>
         </nav>
-        <nav class="d-flex align-items-center justify-content-between bg-dark-subtle px-3 ">
+        <nav class="d-flex align-items-center justify-content-between bg-dark-subtle px-3">
             <a href="/pages/stats.html" class="text-ae">
                 <i class="fa-solid fa-square-caret-left"></i>
             </a>
@@ -58,22 +65,22 @@
         </nav>
     </header>
     <main>
-        <aside class="d-flex justify-content-between align-items-center px-3 flex-wrap-reverse pt-1">
+        <aside class="d-flex justify-content-between align-items-center px-3 pt-3 flex-wrap-reverse pt-1">
             <form class="d-none d-md-flex gap-4 d-flex flex-wrap  ">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="categoria">
+                    <input class="form-check-input" type="checkbox" name="categoria">
                     categoria1</label>
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="categoria">
+                    <input class="form-check-input" type="checkbox" name="categoria">
                     categoria2</label>
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="categoria">
+                    <input class="form-check-input" type="checkbox" name="categoria">
                     categoria3</label>
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="categoria">
+                    <input class="form-check-input" type="checkbox" name="categoria">
                     categoria4</label>
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="categoria">
+                    <input class="form-check-input" type="checkbox" name="categoria">
                     categoria5</label>
             </form>
             <form class="d-flex order-1 search-bar " role="search">
@@ -114,87 +121,15 @@
             </div>
 
         </aside>
-        <aside id="card-container" class="card-carrousel d-flex justify-content-around m-2 flex-wrap  align-items-center">
-            <!-- <div class="card m-2" style="width: 18rem;">
-                <img src="/assets/img/Cinema.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Cinema</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a sapien
-                        hendrerit, suscipit orci vitae, auctor lorem. Nulla fermentum.</p>
-                </div>
-                <div class="card-footer d-flex justify-content-between align-items-center ">
-                    <a href="">Precios: $xxxxx</a>
-                    <a href="/pages/details.html" class="btn btn-ae border">Ver mas...</a>
-                </div>
+        <div class="card-carousel px-2">
+            <div id="card-container" class="card-carrousel">
             </div>
-
-            <div class="card m-2" style="width: 18rem;">
-                <img src="/assets/img/Costume_Party.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Costume Party</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a sapien
-                        hendrerit, suscipit orci vitae, auctor lorem. Nulla fermentum.</p>
-                </div>
-                <div class="card-footer d-flex justify-content-between align-items-center ">
-                    <a href="">Precios: $xxxxx</a>
-                    <a href="/pages/details.html" class="btn btn-ae border">Ver mas...</a>
-                </div>
+            <div id="slider-controls" class="d-flex justify-content-center m-2 flex-wrap  align-items-center">
+                <button class="btn btn-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="btn btn-next"><i class="fas fa-chevron-right"></i></button>
             </div>
+        </div>
 
-            <div class="card m-2" style="width: 18rem;">
-                <img src="/assets/img/Food_Fair.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Food Fair</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a sapien
-                        hendrerit, suscipit orci vitae, auctor lorem. Nulla fermentum.</p>
-                </div>
-                <div class="card-footer d-flex justify-content-between align-items-center ">
-                    <a href="">Precios: $xxxxx</a>
-                    <a href="/pages/details.html" class="btn btn-ae border">Ver mas...</a>
-                </div>
-            </div>
-
-            <div class="card m-2" style="width: 18rem;">
-                <img src="/assets/img/Marathon.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Marathon</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a sapien
-                        hendrerit, suscipit orci vitae, auctor lorem. Nulla fermentum.</p>
-                </div>
-                <div class="card-footer d-flex justify-content-between align-items-center ">
-                    <a href="">Precios: $xxxxx</a>
-                    <a href="/pages/details.html" class="btn btn-ae border">Ver mas...</a>
-                </div>
-            </div>
-
-            <div class="card m-2" style="width: 18rem;">
-                <img src="/assets/img/Museum_Tour.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Museum Tour</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a sapien
-                        hendrerit, suscipit orci vitae, auctor lorem. Nulla fermentum.</p>
-                </div>
-                <div class="card-footer d-flex justify-content-between align-items-center ">
-                    <a href="">Precios: $xxxxx</a>
-                    <a href="/pages/details.html" class="btn btn-ae border">Ver mas...</a>
-                </div>
-            </div>
-
-            <div class="card m-2" style="width: 18rem;">
-                <img src="/assets/img/Music_Concert.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Music Concert</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a sapien
-                        hendrerit, suscipit orci vitae, auctor lorem. Nulla fermentum.</p>
-                </div>
-                <div class="card-footer d-flex justify-content-between align-items-center ">
-                    <a href="">Precios: $xxxxx</a>
-                    <a href="/pages/details.html" class="btn btn-ae border">Ver mas...</a>
-                </div>
-            </div> -->
-
-            
-        </aside>
 
     </main>
     <footer class="px-2 d-flex justify-content-between bg-dark-subtle align-items-center">
@@ -214,7 +149,9 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/af1e17da6b.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </body>
 
 </html>
-
