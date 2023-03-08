@@ -58,7 +58,7 @@ const carrousel = (array) => {
     }
     $('#card-container').slick({
         infinite: true,
-        centerMode: array.length > 5,
+        centerMode: array.length < 5,
         focusOnSelect: true,
         slidesToShow: slidesToShow,
         slidesToScroll: 1,

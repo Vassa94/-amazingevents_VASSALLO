@@ -54,13 +54,14 @@ function displayCards(array) {
 }
 
 const carrousel = (array) => {
-    let slidesToShow = 5;
-    if (array.length <= 5) { 
+    let slidesToShow = 4;
+    if (array.length <= 4) { 
         slidesToShow = array.length; 
     }
+    console.log(array.length)
     $('#card-container').slick({
         infinite: true,
-        centerMode: array.length > 5,
+        centerMode: array.length > 4,
         focusOnSelect: true,
         slidesToShow: slidesToShow,
         slidesToScroll: 1,
