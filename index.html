@@ -66,22 +66,8 @@
     </header>
     <main>
         <aside class="d-flex justify-content-between align-items-center px-3 pt-3 flex-wrap-reverse pt-1">
-            <form class="d-none d-md-flex gap-4 d-flex flex-wrap  ">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="categoria">
-                    categoria1</label>
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="categoria">
-                    categoria2</label>
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="categoria">
-                    categoria3</label>
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="categoria">
-                    categoria4</label>
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="categoria">
-                    categoria5</label>
+            <form id="category-section" class="d-none d-md-flex gap-4 d-flex flex-wrap  ">
+
             </form>
             <form class="d-flex order-1 search-bar " role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -121,14 +107,18 @@
             </div>
 
         </aside>
-        <div class="card-carousel px-2">
+        <aside class="card-carousel px-2 ">
+
             <div id="card-container" class="card-carrousel">
+            </div>
+            <div id="no-results" class="d-none d-flex justify-content-center">
+                <img class="cat404" src="/assets/img/404_cat.png" alt="No se encontraron resultados">
             </div>
             <div id="slider-controls" class="d-flex justify-content-center m-2 flex-wrap  align-items-center">
                 <button class="btn btn-prev"><i class="fas fa-chevron-left"></i></button>
                 <button class="btn btn-next"><i class="fas fa-chevron-right"></i></button>
             </div>
-        </div>
+        </aside>
 
 
     </main>
@@ -144,12 +134,12 @@
     </footer>
 
 
-    <script src="../assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/af1e17da6b.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/main.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </body>

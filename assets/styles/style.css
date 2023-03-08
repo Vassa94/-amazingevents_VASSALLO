@@ -24,11 +24,11 @@ li>a:hover {
 }
 
 .btn-ae {
-    --bs-btn-color: var(--aecolor) ;
+    --bs-btn-color: var(--aecolor);
     --bs-btn-bg: var(--aecolor) !important;
     --bs-btn-border-color: var(--aecolor);
     --bs-btn-hover-color: var(--aecolor);
-    --bs-btn-hover-bg: #fff !important ;
+    --bs-btn-hover-bg: #fff !important;
     --bs-btn-hover-border-color: var(--aecolor);
     --bs-btn-focus-shadow-rgb: 49, 132, 253;
     --bs-btn-active-color: #fff;
@@ -51,7 +51,7 @@ nav {
 }
 
 main {
-    min-height: 84vh;
+    height: 84vh;
 
 }
 
@@ -90,15 +90,15 @@ footer {
     height: 200px;
     width: 100%;
     object-fit: cover;
-    border-radius: 15px 15px 0 0 !important ;
+    border-radius: 15px 15px 0 0 !important;
 }
 
-.card{
+.card {
     border-radius: 15px !important;
     box-shadow: 1px 1px 2px var(--bs-black);
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.01);
     transition: 0.5s;
     background-color: #d9d9d975;
@@ -113,6 +113,13 @@ footer {
     margin-top: 8%;
 }
 
+.cat404 {
+    width: 20%;
+    /* Ajusta el alto a tu gusto */
+}
+
+
+
 #card-container {
     visibility: hidden;
     opacity: 0;
@@ -123,7 +130,6 @@ footer {
     visibility: visible;
     opacity: 1;
 }
-
 
 @media screen and (max-width:904px) {
     .search-bar {
