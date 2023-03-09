@@ -1,5 +1,6 @@
 let cards = [];
 const $checks = document.getElementById('category-section');
+const $checksResponsive = document.getElementById('category-section-responsive');
 const $search = document.querySelector('input[placeholder="Search"]');
 
 function dataFetch() {
@@ -101,6 +102,7 @@ const catArray = (array) => {
 function displayCategory(array) {
     let category = catArray(array);
     const catFragment = document.createDocumentFragment();
+    const catFragmentRes = document.createDocumentFragment();
     category.forEach((element) => {
         const catElement = document.createElement('label');
         catElement.classList.add('form-check-label');
@@ -108,9 +110,22 @@ function displayCategory(array) {
             <input type="checkbox" id="${element.toLowerCase()}" class="form-check-input" name="${element}">
             ${element}`;
         catFragment.appendChild(catElement);
+
+        const catLiElement = document.createElement('li');
+        catLiElement.classList.add('d-flex', 'justify-content-center',);
+        catLiElement.innerHTML = `
+            <label>    
+            <input type="checkbox" id="${element.toLowerCase()}" class="form-check-input" name="${element}">
+            ${element}
+            </label>`;
+
+        catFragmentRes.appendChild(catLiElement);
+
     });
     const catContainer = document.getElementById('category-section');
     catContainer.appendChild(catFragment);
+    const catResContainer = document.getElementById('category-section-responsive');
+    catResContainer.appendChild(catFragmentRes);
 }
 
 const searchFilter = (array, search) => {
@@ -150,7 +165,13 @@ $search.addEventListener('input', (e) => {
     carrousel(dataFilter);
 })
 
-
+$checksResponsive.addEventListener('change', () => {
+    let dataFilter = unifiedFilter(cards.events)
+    console.log(dataFilter)
+    $('#card-container').slick('unslick');
+    displayCards(dataFilter)
+    carrousel(dataFilter);
+  })
 
 
 

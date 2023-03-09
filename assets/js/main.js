@@ -1,5 +1,5 @@
 let cards = [];
-$checks = document.getElementById('category-section')
+const $checks = document.getElementById('category-section')
 const $checksResponsive = document.getElementById('category-section-responsive');
 const $search = document.querySelector('input[placeholder="Search"]');
 

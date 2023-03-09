@@ -63,13 +63,13 @@
         </nav>
     </header>
     <main>
-        <aside class="d-flex justify-content-between align-items-center px-3 flex-wrap-reverse pt-1">
+        <aside class="d-flex justify-content-between align-items-center px-3 pt-3 flex-wrap-reverse pt-1">
             <form id="category-section" class="d-none d-md-flex gap-4 d-flex flex-wrap  ">
 
             </form>
             <form class="d-flex order-1 search-bar " role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
             </form>
 
             <div class=" d-block d-sm-block d-md-none w-100 dropdown my-2">
@@ -77,45 +77,25 @@
                     aria-expanded="false">
                     Categorias
                 </button>
-                <ul class="dropdown-menu w-100 ">
-                    <li class="d-flex justify-content-center">
-                        <label class="form-check-label p-2">
-                            <input class="form-check-input" type="radio" name="categoria" id="categoria1">
-                            categoria1</label>
-                    </li>
-                    <li class="d-flex justify-content-center"><label class="form-check-label p-2">
-                            <input class="form-check-input" type="radio" name="categoria" id="categoria2">
-                            categoria2</label></li>
-                    <li class="d-flex justify-content-center">
-                        <label class="form-check-label p-2">
-                            <input class="form-check-input" type="radio" name="categoria" id="categoria3">
-                            categoria3</label>
-                    </li>
-                    <li class="d-flex justify-content-center">
-                        <label class="form-check-label p-2">
-                            <input class="form-check-input" type="radio" name="categoria" id="categoria4">
-                            categoria4</label>
-                    </li>
-                    <li class="d-flex justify-content-center">
-                        <label class="form-check-label p-2">
-                            <input class="form-check-input" type="radio" name="categoria" id="categoria5">
-                            categoria5</label>
-                    </li>
+                <ul id="category-section-responsive" class="dropdown-menu w-100">
+                    
                 </ul>
             </div>
 
         </aside>
-        <div class="card-carousel ">
-            <div id="card-container" class="card-carrousel ">
+        <aside class="card-carousel px-2 ">
+
+            <div id="card-container" class="card-carrousel">
+            </div>
+            <div id="no-results" class="d-none d-flex justify-content-center">
+                <img class="cat404" src="/assets/img/404_cat.png" alt="No se encontraron resultados">
             </div>
             <div id="slider-controls" class="d-flex justify-content-center m-2 flex-wrap  align-items-center">
                 <button class="btn btn-prev"><i class="fas fa-chevron-left"></i></button>
                 <button class="btn btn-next"><i class="fas fa-chevron-right"></i></button>
             </div>
-            <div id="no-results" class="d-none d-flex justify-content-center">
-                <img class="cat404" src="/assets/img/404_cat.png" alt="No se encontraron resultados">
-            </div>
-        </div>
+        </aside>
+
 
     </main>
     <footer class="px-2 d-flex justify-content-between bg-dark-subtle align-items-center">
