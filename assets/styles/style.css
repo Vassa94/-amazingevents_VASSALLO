@@ -24,7 +24,7 @@ li>a:hover {
 }
 
 .btn-ae {
-    --bs-btn-color: var(--aecolor);
+    
     --bs-btn-bg: var(--aecolor) !important;
     --bs-btn-border-color: var(--aecolor);
     --bs-btn-hover-color: var(--aecolor);
@@ -93,7 +93,13 @@ footer {
     border-radius: 15px 15px 0 0 !important;
 }
 
+#card-container > div > div{
+    display: flex;
+    justify-content: center;
+}
+
 .card {
+    max-width: 18rem;
     border-radius: 15px !important;
     box-shadow: 1px 1px 2px var(--bs-black);
 }
