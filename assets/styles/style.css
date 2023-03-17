@@ -73,7 +73,7 @@ footer {
 }
 
 .navbar-brand:hover {
-    transform: rotate(360deg);
+    transform: scale(1.1);
     transition: 3s;
 }
 
@@ -193,8 +193,4 @@ th,tr{
 table{
     
     border-collapse: collapse
-}
-
-thead{
-
 }
