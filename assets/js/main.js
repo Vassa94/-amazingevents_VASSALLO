@@ -31,7 +31,7 @@ function displayCards(array) {
                 <img src="${element.image}" class="card-img-top" alt="${element.name}">
                 <div class="card-body">
                     <h5 class="card-title">${element.name}</h5>
-                    <p class="card-text">${element.description}</p>
+                    <p class="card-text">${element.description.slice(0, 55)}...</p>
                 </div>
                 <div class="card-footer d-flex justify-content-between align-items-center ">
                     <a href="">Precios: $${element.price}</a>
