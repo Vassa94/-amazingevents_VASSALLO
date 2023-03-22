@@ -36,7 +36,7 @@ function displayCards(array) {
                 </div>
                 <div class="card-footer d-flex justify-content-between align-items-center ">
                     <a href="">Precios: $${element.price}</a>
-                    <a href="/pages/details.html?cardData=${encodeURIComponent(JSON.stringify(element))}" class="btn btn-ae border">Ver más...</a>
+                    <a href="/pages/details.html?cardId=${encodeURIComponent(JSON.stringify(element._id))}" class="btn btn-ae border">Ver más...</a>
                 </div>`;
             cardFragment.appendChild(cardElement);
         }
