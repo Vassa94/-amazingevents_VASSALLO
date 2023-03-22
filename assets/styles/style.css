@@ -150,11 +150,12 @@ footer {
 .detailsContenedor{
     background-color: #d90368;
     border-radius: 40px;
-    width: 600px;
+    width: 100%; 
+    max-width: 600px; 
     display: flex;
-    justify-content: space-between;
-    gap: 3;
+    margin: 2px;
     align-items: center;
+    
 }
 
 .contenedorDiv{

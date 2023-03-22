@@ -30,10 +30,14 @@ function getMaxAttendanceEvent(events) {
     let maxAttendancePercent = 0;
     let maxAttendanceEvent = null;
     events.forEach(event => {
-        let attendancePercent = (event.assistance / event.capacity) * 100;
+        let assistance = event.assistance || event.estimate
+        let attendancePercent = (assistance *100) / event.capacity;
+        console.log("evento: " + event.name, " porcentaje: " + attendancePercent);
         if (attendancePercent > maxAttendancePercent) {
             maxAttendancePercent = attendancePercent;
             maxAttendanceEvent = event;
+            //console.log("evento: " + maxAttendanceEvent.name, " porcentaje: " + maxAttendancePercent);
+            
         }
     });
     return maxAttendanceEvent.name;
@@ -44,7 +48,8 @@ function getLowestPercentAttendance() {
     let minAttendancePercent = 100;
     let minAttendanceEvent = null;
     events.forEach(event => {
-        let attendancePercent = (event.assistance / event.capacity) * 100;
+        let assistance = event.assistance || event.estimate
+        let attendancePercent = (assistance / event.capacity) * 100;
         if (attendancePercent < minAttendancePercent) {
             minAttendancePercent = attendancePercent;
             minAttendanceEvent = event;
@@ -73,7 +78,6 @@ function getCategoryDetails(events, categoryType) {
     } else if (categoryType === "past") {
         filteredEvents = events.filter((event) => event.date < currentDate);
     }
-    console.log(filteredEvents)
     /* Crear un objeto con las categorías como claves y los valores son el nombre, los ingresos, la
     asistencia y el número de eventos. */
     const categories = {};
@@ -84,8 +88,7 @@ function getCategoryDetails(events, categoryType) {
                 name: event.category,
                 revenue: 0,
                 attendance: 0,
-                capacity: 0,
-                eventCount: 0,
+                capacity: 0
             };
         }
 
@@ -94,7 +97,6 @@ function getCategoryDetails(events, categoryType) {
 
         categories[event.category].revenue += revenue;
         categories[event.category].attendance += attendance;
-        categories[event.category].eventCount++;
         categories[event.category].capacity += event.capacity;
     });
     console.log(categories)
@@ -103,8 +105,7 @@ function getCategoryDetails(events, categoryType) {
     /* Iterando a través del objeto de categorías y empujando el nombre, los ingresos y el porcentaje
     de asistencia a las categoríasArray. */
     for (const category in categories) {
-        const revenue = categories[category].revenue.toFixed(2);
-//        const attendancePercentage = ((categories[category].attendance / (categories[category].eventCount * categories[category].capacity)) * 100).toFixed(2);
+        const revenue = categories[category].revenue;
         const attendancePercentage = ((categories[category].attendance * 100)/ categories[category].capacity).toFixed(2);
 
 
@@ -139,7 +140,7 @@ function displayCategoryStatistics(array, id) {
         row.classList.add();
         row.innerHTML = `
         <td>${element.name}</td>
-        <td>$${element.revenue.toLocaleString()}</td>
+        <td>$${element.revenue.toLocaleString('en-US')}.00</td>
         <td>${element.attendancePercentage}</td>
     `;
         rowFragment.appendChild(row);
